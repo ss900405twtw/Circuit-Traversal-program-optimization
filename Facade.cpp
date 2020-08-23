@@ -77,8 +77,21 @@ CirGate* FacadeMgr::findGate (int id) const
 void FacadeMgr::printGate()
 {
 	//Using DFS algorithm to print the gate (delegateion)
+	//print PO
+	cout << "Pi: ";
+	for(int i = 0; i < PiList.size(); ++i)
+		cout << PiList[i]->getID() << " ";
+	cout << endl;
+	cout << "Po: ";
+	for(int i = 0; i < PoList.size(); ++i)
+		cout << PoList[i]->getID() << " ";
+	cout << endl;
+	cout << "And: ";
+	for(int i = 0; i < AigList.size(); ++i)
+		cout << AigList[i]->getID() << " ";
+	cout << endl;
 	st = new DFS(PoList);
-	st->exec();
+	// st->exec();
 	st->printGate();
 }
 void FacadeMgr::recycleMemory()
