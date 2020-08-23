@@ -15,7 +15,7 @@ public:
   	  {
   		  cout << stateList[i]->getID() << endl; 
   	  }
-  	  cout << endl;
+  	  // cout << endl;
     }
 
 protected:
